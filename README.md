@@ -24,7 +24,7 @@ README.md
 3. Change file `./src/main/docker/Dockerfile.native`:
 
 ```
-FROM maven-graalvm AS build-env
+FROM jycr/maven-graalvm:3-jdk-11 AS build-env
 
 ARG JAVA_TOOL_OPTIONS
 
