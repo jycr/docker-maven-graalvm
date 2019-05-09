@@ -13,7 +13,7 @@ RUN apt-get update \
 
 ENV GRAALVM_HOME=/usr/share/graalvm
 
-ARG GRAALVM_VERSION=1.0.0-rc15
+ARG GRAALVM_VERSION=1.0.0-rc16
 
 RUN mkdir -p "${GRAALVM_HOME}" \
     && curl -L \
@@ -24,3 +24,5 @@ RUN mkdir -p "${GRAALVM_HOME}" \
 
 COPY ./build-jre.sh /
 COPY ./setupMavenProxy.sh /
+
+RUN chmod +x /*.sh

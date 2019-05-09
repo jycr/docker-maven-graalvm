@@ -51,8 +51,6 @@ RUN mvn -B \
     -s /usr/share/maven/ref/settings-docker.xml \
     -f /work/pom.xml \
     -Pnative \
-    compile \
-    quarkus:build \
     verify
 
 # Make sure native application has execution flag
